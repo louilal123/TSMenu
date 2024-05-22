@@ -1,0 +1,2849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS MENU</title>
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+   <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div data-role="page" class="page1" id="page1">
+        <div data-role="panel" id="overlaypanel" class="overlay-panel" data-dismissible="false" data-position="left" 
+        data-display="overlay">
+          <i class="fas fa-times navicon1" data-rel="close" style="color: black;"></i>
+            <div class="title1">
+              
+                <img src="res/logo.png" width="140px" height="140px"><br><br>
+            </div>
+            <a href="#" target="_self"style="background-color: black;">
+                <i class="fas fa-home navicon" style="color: white;"></i>
+                <span class="navtext" style="color: white;">Home</span>
+            </a>
+            <a href="#page2" target="_self">
+                <i class="fas fa-phone navicon"></i>
+                <span class="navtext">Contact Us</span>
+            </a>
+            <a href="#page3" target="_self">
+                <i class="fas fa-info-circle navicon"></i>
+                <span class="navtext">About</span>
+            </a>
+  
+            <a href="#page4" target="_self">
+                <i class="fas fa-user navicon"></i>
+                <span class="navtext">Developer Info</span>
+            </a>
+            <br><br><br><br><br><br>
+            <a href="#close" data-rel="close"  id="exitButton">
+                <i class="fas fa-sign-out-alt navicon"></i>
+                <span class="navtext" id="exitButton">Exit App</span>
+            </a>
+        
+<script>
+    document.getElementById("exitButton").addEventListener("click", function(event) {
+      event.preventDefault(); 
+      var confirmation = confirm("Are you sure you want to exit this app?");
+      if (confirmation) {
+          window.location.href = "about:blank"; 
+      }
+  });</script>
+            
+        </div>
+     <div role="header" class="header" data-position="fixed" style="padding-bottom: 30px;">
+        <a href="#overlaypanel" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+        </a>
+        <a href="#" target="_self" class="head"style="margin-top: -8px; 
+        margin-left: 260px; padding: 0px; 
+         font-size: 0px; background-color:transparent;">
+           <select id="language-select" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+            <option value="index.html">En</option>
+            <option value="wwwfil/index.html">Fil</option>
+        </select>
+        </a>
+        <script>
+            document.getElementById('language-select').addEventListener('change', function() {
+                var selectedOption = this.options[this.selectedIndex];
+                var url = selectedOption.value;
+                window.location.href = url; 
+            });
+        </script>
+         <br>
+     </div>
+    
+    <div role="main" class="content" style="margin-top: 60px !important;">
+        <h2 class="main">Main</h2>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <ul>
+                    <li>
+                        <a href="#page5a" target="_self"
+                           data-transition="fade">
+                            <span class="fas fa-shrimp" ></span><br> <br>
+                            <h2>Seafood</h2>
+                            <p>11 items</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+             <ul>
+                    <li>
+                        <a href="#page5c" target="_self" 
+                        data-transition="fade">
+                            <span class="fas fa-drumstick-bite" ></span><br> <br>
+                            <h2>Pork/Poultry</h2>
+                            <p>8 items</p>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li>
+                        <a href="#page5f" target="_self" data-transition="fade">
+                            <span class="fas fa-hamburger" ></span> <br> <br>
+                            <h2>Snacks</h2>
+                            <p>10 items</p>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+            <div class="ui-block-b">
+             <ul>
+                    <li>
+                        <a href="#page5e" target="_self" data-transition="fade">
+                            <span class="fas fa-bowl-rice" ></span><br> <br>
+                            <h2>Rice</h2>
+                            <p>3 items</p>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+           
+            <div class="ui-block-a" >
+                <ul >
+                    <li>
+                        <a href="#page5d" target="_self" data-transition="fade">
+                            <span class="fas fa-leaf" ></span>  <br> <br>
+                            <h2>Veg/Noodles</h2>
+                            <p>4 items</p>
+                        </a>
+                    </li>
+                </ul> 
+            </div> 
+            <div class="ui-block-b">
+             <ul >
+                    <li>
+                        <a href="#page5b" target="_self" data-transition="fade">
+                            <span class="fas fa-beer" style="margin-left: 88px;"></span><br> <br>
+                            <h2>Drinks</h2>
+                            <p>3 items</p>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+         </div>
+         <h2 class="main">Others</h2>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background: rgb(76, 146, 148);">
+                        <a href="Tutorial/home.html" target="_self"
+                           data-transition="fade">
+                            <span class="fas fa-play-circle" style="color: lightcyan; margin-left: 90px; margin-top: 5px;
+                              font-size: 44px;" ></span><br> <br>
+                            <h2>Tutorials</h2>
+                            <p>1 Video</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+             <ul >
+                    <li style="background: rgb(95, 89, 89);">
+                        <a href="Quizzes/index.html" target="_self" 
+                        data-transition="fade">
+                            <span class="fas fa-lightbulb" style="color: rgb(227, 156, 24);
+                             margin-left: 92px;font-size: 44px;  margin-top: 5px;"></span><br> <br>
+                            <h2>Quizzes</h2>
+                            <p>3 Categories</p>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+            </div>
+            </div>
+        <div class="bottom-nav">
+            <a href="#page1" target="_self" class="nav-item tm1" 
+            style="color: rgb(148, 116, 88); text-decoration: none; outline: none; 
+            outline-offset: 0cap;"> <span class="fas fa-home hm" 
+            style=" margin-left: 5px;"></span> <br> Home</a>
+            <a href="#page5" target="_self"  class="nav-item tm2" 
+            style="color: rgb(255, 255, 255); "><span class="fas fa-search"></span> <br>Search</a>
+            <a href="#page6" target="_self" class="nav-item tm2"  
+            style="color: #f8f9fa;"><span class="fas fa-heart" 
+                style="color: rgb(255, 255, 255); ">
+                </span><br>
+                Favorite</a>
+            <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); color: white;">
+                <span class="fas fa-shopping-cart" style="color: rgb(255, 255, 255); "
+                 class="home1" ></span > <br>Cartlist</a>
+        </div>
+    </div> 
+    
+</div><!-- Page 2 -->
+<div data-role="page" class="page" id="page2">
+    <div data-role="panel" id="overlaypanel1" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;"></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self">
+            <i class="fas fa-home navicon"></i>
+            <span class="navtext">Home</span>
+        </a>
+        <a href="#" target="_self" style="background-color: black;">
+            <i class="fas fa-phone navicon" style="color: white;"></i>
+            <span class="navtext" style="color: white;">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self" >
+            <i class="fas fa-info-circle navicon"></i>
+            <span class="navtext">About</span>
+        </a>
+
+        <a href="#page4" target="_self" >
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+          <a href="#" data-rel="close"  id="exitButton1">
+                <i class="fas fa-sign-out-alt navicon"></i>
+                <span class="navtext" id="exitButton">Exit App</span>
+            </a> 
+<script>
+    document.getElementById("exitButton1").addEventListener("click", function(event) {
+      event.preventDefault(); 
+      var confirmation = confirm("Are you sure you want to exit this app?");
+      if (confirmation) {
+          window.location.href = "about:blank"; 
+      }
+  });</script>
+    </div>
+    <div role="header" class="header" data-position="fixed" style="padding-bottom: 30px;">
+        <a href="#overlaypanel1" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+        </a>
+        <a href="#" target="_self" class="head"style="margin-top: -8px; 
+        margin-left: 260px; padding: 0px; 
+         font-size: 0px; background-color:transparent;">
+           <select id="language-select1" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+            <option value="#">En</option>
+            <option value="wwwfil/index.html#page2">Fil</option>
+        </select>
+        </a>
+        <script>
+            document.getElementById('language-select1').addEventListener('change', function() {
+                var selectedOption = this.options[this.selectedIndex];
+                var url = selectedOption.value;
+                window.location.href = url; 
+            });
+        </script>
+         <br>
+     </div>
+    <div role="main" class="content1" style="padding: 5px;"><br><br> <br>
+        <h2 style="text-align: center; margin-top: 10px; color: black !important;">Contact Us</h2>
+        <hr style="opacity: 0.2; width: 95%;">
+        <div style="text-align: center;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.579937652822!2d123.731291!3d11.2922576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a88186380ca2f9%3A0x40ea07027cf40f50!2sTOMGU%20SQUARE!5e0!3m2!1sen!2sph!4v1714823502192!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:1;  width:310px; height:300px;"  loading="lazy"></iframe>
+            
+            <p style="font-size: 16px; color: #343a40; margin-top: 20px;">Address: T. Alonzo Street, Poblacion, Madridejos, 6053 Cebu</p>
+            
+            <p style="font-size: 16px; color: #343a40;">Phone: (032) 439 7370</p>
+            
+            <p style="font-size: 16px; color: #343a40; margin-top: 20px;">Open ⋅ Closes 10 PM</p>
+            <p style="font-size: 16px; color: #343a40;">Website: <a href="https://www.facebook.com/tomgufooddrinks" target="_blank">Click Here</a></p>
+           </div>
+           
+    </div>
+</div>
+
+<!--  page3 -->
+<div data-role="page" class="page" id="page3">
+    <div data-role="panel" id="overlaypanel2" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#" target="_self" style="background-color: black;">
+            <i class="fas fa-info-circle navicon" style="color: white;"></i>
+            <span class="navtext" style="color: white;">About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#" data-rel="close"  id="exitButton3">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext">Exit App</span>
+        </a>
+    
+<script>
+document.getElementById("exitButton3").addEventListener("click", function(event) {
+  event.preventDefault(); 
+  var confirmation = confirm("Are you sure you want to exit this app?");
+  if (confirmation) {
+      window.location.href = "about:blank"; 
+  }
+});</script>
+
+    </div>
+    <div role="header" class="header" data-position="fixed" style="padding-bottom: 20px;">
+        <a href="#overlaypanel2" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+        </a>
+        <a href="#" target="_self" class="head"style="margin-top: -8px; 
+        margin-left: 260px; padding: 0px; 
+         font-size: 0px; background-color:transparent;">
+           <select id="language-select3" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+            <option value="#">En</option>
+            <option value="wwwfil/index.html#page3">Fil</option>
+        </select>
+        </a>
+        <script>
+            document.getElementById('language-select3').addEventListener('change', function() {
+                var selectedOption = this.options[this.selectedIndex];
+                var url = selectedOption.value;
+                window.location.href = url; 
+            });
+        </script>
+         <br>
+     </div>
+    <div role="main" class="content" style="margin-top: 40px !important;" ><br><br>
+        <h2 style="text-align: center; margin-top: 0px; color: black !important;">About TS Menu App</h2> <br>
+        <div style="text-align: center;">
+            <img src="res/logo.png" alt="App Logo" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+            <h3 style="font-size: 24px; color: #343a40; margin-bottom: 10px; 
+            text-align: center;">TS-Menu v1</h3> 
+            <p style="font-size: 16px; color: #6c757d; margin-bottom: 0px;">This app is intended to showcase and display all the food and drinks menu of TomguSquare Restaurant. </p>
+           
+            <h4 style="font-size: 20px; color: #343a40; margin-bottom: 0px;"> 
+                </i> Developed </h4>
+            <p style="font-size: 16px; color: #6c757d; margin-bottom: 0px;"><strong>Developed </strong>
+                as one of the final output requirement in Mobile App Development
+                 in the 2nd semester of the 3rd Year BSIT Course.</p>
+                 <h4 style="font-size: 20px; color: #343a40; margin-bottom: 0px;"> Disclaimer</h4>
+                 <p style="font-size: 16px; color: #6c757d; margin-bottom: 0px;">The student do not own the media and images 
+                    used in this application. All rights belong to their rightful owner.</p>
+     </div>
+    </div>
+</div>
+<div data-role="page" class="page" id="page4">
+    <div data-role="panel" id="overlaypanel3" class="overlay-panel" data-dismissible="false" data-position="left" 
+        data-display="overlay">
+          <i class="fas fa-times navicon1" data-rel="close" style="color: black;"></i>
+            <div class="title1">
+              
+                <img src="res/logo.png" width="140px" height="140px"><br><br>
+            </div>
+            <a href="#page1" target="_self">
+                <i class="fas fa-home navicon"></i>
+                <span class="navtext" >Home</span>
+            </a>
+            <a href="#page2" target="_self">
+                <i class="fas fa-phone navicon"></i>
+                <span class="navtext">Contact Us</span>
+            </a>
+            <a href="#page3" target="_self">
+                <i class="fas fa-info-circle navicon"  ></i>
+                <span class="navtext" >About</span>
+            </a>
+  
+            <a href="#" target="_self"  style="background-color: black;" >
+                <i class="fas fa-user navicon" style="color: white;"></i>
+                <span class="navtext" style="color: white;">Developer Info</span>
+            </a>
+            <br><br><br><br><br><br>
+            <a href="#" data-rel="close"  id="exitButton2">
+                <i class="fas fa-sign-out-alt navicon"></i>
+                <span class="navtext">Exit App</span>
+            </a>
+<script>
+    document.getElementById("exitButton2").addEventListener("click", function(event) {
+      event.preventDefault(); 
+      var confirmation = confirm("Are you sure you want to exit this app?");
+      if (confirmation) {
+          window.location.href = "about:blank"; 
+      }
+  });</script>
+           
+        </div>
+     <div role="header" class="header" data-position="fixed" style="padding-bottom: 10px;">
+        <a href="#overlaypanel3" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+        </a>
+        <a href="#" target="_self" class="head"style="margin-top: -8px; 
+        margin-left: 260px; padding: 0px; 
+         font-size: 0px; background-color:transparent;">
+           <select id="language-select4" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+            <option value="#">En</option>
+            <option value="wwwfil/index.html#page4">Fil</option>
+        </select>
+        </a>
+        <script>
+            document.getElementById('language-select4').addEventListener('change', function() {
+                var selectedOption = this.options[this.selectedIndex];
+                var url = selectedOption.value;
+                window.location.href = url; 
+            });
+        </script>
+         <br>
+     </div>
+    <div role="main" class="content1" style="background-color: white !important;">
+        <h2 style="text-align: center; margin-top: 60px; color:#041423; margin-bottom: 25px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Meet The Developer</h2>
+<div style=" border-radius: 10px; padding-top: 0px !important;padding: 20px; padding-bottom: 0PX I !important;">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="res/louielouiepic.jpg" alt="Developer Photo" 
+        style="width: 150px; height: 150px; border-radius: 50%; border: 5px solid #fff; 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); margin-bottom: 0px !important;">
+         <h3 style="font-size: 24px; color: #2b445c; margin-bottom: 10px; 
+         text-align: center; font-family: system-ui, -apple-system, 
+         BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+         'Helvetica Neue', sans-serif; margin-top: 0px !important;">Jhon Louie Rubin</h3>
+    </div>
+    <div style="text-align: left;">
+       
+        <h4 style="font-size: 16px; color: #343a40; margin-bottom: 10px;"> 
+            <i class="fas fa-user"></i> Personal Information:</h4>
+        
+        <p style="font-size: 16px; color: #6c757d; margin-bottom: 0px;"><strong>Address:</strong> Purok Gimelina Maalat, Madridejos, Cebu 
+            <br><strong>Age:</strong> 21 years old <br><strong>Civil Status:</strong> Single</p>
+        <h4 style="font-size: 16px; color: #343a40; margin-bottom: 0px;"> 
+            <i class="fas fa-code"></i> Education:</h4>
+        <p style="font-size: 16px; color: #6c757d; margin-bottom: 0px;"><strong>College:</strong> Madridejos Community College (Current) <br><strong>Senior High School:</strong> Madridejos National High School</p>
+        <h4 style="font-size: 16px; color: #343a40; margin-bottom: 0px;"> 
+            <i class="fas fa-heart" style="margin: 0px;"></i> Hobbies & Interests:</h4>
+        <p style="font-size: 16px; color: #6c757d; margin-bottom: 0px;">-Learning <br>-Interested in Making this world a Better Place</p>
+        <h4 style="font-size: 16px; color: #343a40; margin-bottom: 0px;"> <i class="fas fa-quote-left"></i> Life Motto:</h4>
+        <p style="font-size: 16px; color: #6c757d; margin-bottom: 0px;">"It doesn't matter if the progress is slow, you just have to keep going."</p>
+    </div>
+    <br>
+    <div class="socials">
+    <h5><span class="fab fa-facebook-f"></span>: @louie.lal23</h5>
+    <h5><span class="fab fa-github"></span>: @louielal123</h5>
+    <h5><span class="fab fa-instagram"></span>: @brade_rlouie23</h5>
+    <h5><span class="fab fa-youtube"></span>: @louieknowstech</h5>
+
+</div>
+<br>
+<h5 style="text-align: center; font-size: 12px; font-weight: lighter;"><span class="fas fa-copyright"></span> MCC 2024</h5>
+
+</div>
+    </div>
+</div>
+<div data-role="page" class="page" id="page5">
+    <div data-role="panel" id="overlaypanel4" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#close" data-rel="close"  id="exitButton">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext" id="exitButton">Exit App</span>
+        </a>
+       
+    </div>
+ <div role="header" class="header" >
+    <a href="#overlaypanel4" class="head" target="_self" 
+    style="color: black; font-size: 22px; font-weight: bold; position:fixed;">
+        <svg width="32" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" 
+            d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+        </svg>
+     </a>
+    
+     <a href="#" target="_self" class="head"style="margin-top: -8px; 
+        margin-left: 260px; padding: 0px; 
+         font-size: 0px; background-color:transparent;">
+           <select id="language-select5" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+            <option value="#">En</option>
+            <option value="wwwfil/index.html#page5">Fil</option>
+        </select>
+        </a>
+        <script>
+            document.getElementById('language-select5').addEventListener('change', function() {
+                var selectedOption = this.options[this.selectedIndex];
+                var url = selectedOption.value;
+                window.location.href = url; 
+            });
+        </script>
+     <br><br> 
+     <input type="text"  id="search" placeholder="Search.." class="ui-icon"> 
+    <div class="filter"> 
+        <a href="#page5" target="_self" class="search" style="color: white;  background-color: maroon;">All</a>
+            <a href="#page5a" target="_self" class="search" style="color: #fff;">Seafood</a>
+             <a href="#page5c" target="_self" class="search" style="color: white;">Poultry</a>
+            <a href="#page5d" target="_self" class="search" style="color: white;">Noodles</a>
+            <a href="#page5f" target="_self" class="search" style="color: white;">Snacks</a>
+            <a href="#page5b" target="_self" class="search" style="color: white;">Drinks</a>
+           <a href="#page5e" target="_self" class="search" style="color: white;">Rice</a>
+        </div>   
+</div>
+    <div role="main" class="content" style="margin-top: 150px;" >  
+          <div class="ui-grid-a" style="margin-top: 10px;">
+            <div class="ui-block-a"  >
+                <ul>
+                    <li style="background-image: url(res/grilled-tuna-belly-7-730x973.jpg); background-size: cover;">
+                        <a href="f_all/tunabelly.html" target="_self"
+                           data-transition="fade">
+                          <br> 
+                            <h2 class="dish" >Grilled Tuna Belly</h2>
+                            <p class="price" style="background: green;
+                            display: inline-block; padding-left: 5px; padding-right: 5px;">&#8369; 230-270</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+             <ul>
+                    <li style="background-image: url(res/grilltunapnagf.jpg); background-size: cover;">
+                        <a href="f_all/tunapanga.html" target="_self"
+                        data-transition="fade">
+                         <br>
+                         <h2 class="dish">Grilled Tuna Panga</h2>
+                         <p class="price">&#8369; 230-270</p>
+                       
+                     <div class="stars">
+                        <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star none"></i>
+                    </div>
+                    </li>
+                </ul> 
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/bilabid.jpg); background-size: cover;">
+                    
+                        <a href="f_all/bilabid.html" target="_self" data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Spicy Bilabid</h2>
+                            <p class="price">&#8369; 230.00</p>
+                        </a> <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/fishkang.jpg); background-size: cover;">
+                    
+                        <a href="f_all/fishkangkong.html" target="_self" data-transition="fade">
+                            <br> <br> 
+                            <h2 class="dish">Fish Kangkong</h2>
+                            <p class="price">&#8369; 220.00</p>
+                        </a> <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/plain.jpg); background-size: cover;">
+                        <a href="f_all/plainrice.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2  class="dish">Plain Rice</h2>
+                            <p  class="price">&#8369; 20.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/friedrice.jpg); background-size: cover;">
+                        <a href="f_all/friedrice.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2  class="dish">Fried Rice</h2>
+                            <p  class="price">&#8369; 120.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+           
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/crab.jpg); background-size: cover;">
+                    
+                        <a href="f_all/chilicrab.html" target="_self" data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Chili  Crab</h2> 
+                            <p class="price" style="padding-bottom: 6px;">&#8369; 270.00</p>
+                        </a> <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div> 
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/seacocum.jpg); background-size: cover;">
+                    
+                        <a href="f_all/seacocumber.html" target="_self" data-transition="fade">
+                         <br>
+                            <h2 class="dish">Braised Sea Cocumber</h2>
+                            <p class="price">&#8369; 300.00</p>
+                        </a> <div class="stars" >
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div> 
+            <div class="ui-block-a"  >
+                <ul>
+                    <li style="background-image: url(res/mountain1.jpg); background-size: cover;">
+                        <a href="f_all/mountain.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Mountain Dew</h2>
+                            <p class="price">&#8369; 40.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/royyy-removebg-preview.png); background-size: cover;">
+                        <a href="f_all/royal.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Royal</h2>
+                            <p  class="price">&#8369; 40.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+           
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/binga.jpg); background-size: cover;">
+                    <a href="f_all/spicybinga.html" target="_self" data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Spicy Binga</h2> 
+                            <p class="price">&#8369; 160.00</p>
+                        </a> <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div> 
+          
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/mongolainfriedrice.jpg); background-size: cover;">
+                        <a href="f_all/Mfriedrice.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2  class="dish">Mongolian Fried Rice</h2>
+                            <p  class="price">&#8369; 280.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/creamyf.jpg); background-size: cover;">
+                     <a href="f_all/creamyfish.html" target="_self" data-transition="fade">
+                            <br> 
+                            <h2  class="dish" >Creamy Fish Fillet</h2> 
+                            <p class="price">&#8369; 190.00</p>
+                        </a>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div> 
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/kalamarisss.jpg); background-size: cover;">
+                    
+                        <a href="f_all/kalamariss&s.html" target="_self" data-transition="fade">
+                            <br> 
+                            <h2  class="dish" >Kalamaris Sweet & Spicy</h2> 
+                            <p  class="price" >&#8369; 230.00</p>
+                        </a> <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div> 
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/kalamarisorig.jpg); background-size: cover;">
+                    
+                        <a href="f_all/kalamarisorig.html" target="_self" data-transition="fade">
+                            <br> 
+                            <h2  class="dish" >Kalamaris Original</h2> 
+                            <p  class="price" >&#8369; 220.00</p>
+                        </a> <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div> 
+
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/scallop.jpg); background-size: cover;">
+                     <a href="f_all/scallop.html" target="_self" data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Creamy Spicy Scallop</h2> 
+                            <p class="price">&#8369; 160.00</p>
+                        </a> <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                    </li>
+                </ul> 
+            </div> 
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/fries.jpg); background-size: cover;">
+                        <a href="f_all/fries.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Fries</h2>
+                            <p class="price">&#8369; 65.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/spa.jpg); background-size: cover;">
+                        <a href="f_all/spaghetti.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Spaghetti</h2>
+                            <p class="price">&#8369; 80.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a"  >
+                <ul>
+                    <li style="background-image: url(res/steak1.jpg); background-size: cover;">
+                        <a href="f_all/burgersteak.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Burger Steak</h2>
+                            <p class="price">&#8369; 130.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/sisig.webp); background-size: cover;">
+                        <a href="f_all/porksisig.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Pork Sisig</h2>
+                            <p class="price">&#8369; 160.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/psteak.jpg); background-size: cover;">
+                        <a href="f_all/porksteak.html" target="_self"
+                           data-transition="fade">
+                            <br>  <br>
+                            <h2 class="dish">Pork Steak</h2>
+                            <p class="price">&#8369; 220.00</p>
+                        </a> 
+                        <div class="stars"  style="margin-bottom: 3px;">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/chalanghalang.jpg); background-size: cover;">
+                        <a href="f_all/chickenhalang.html" target="_self"
+                           data-transition="fade"> <br>
+                            <h2 class="dish">Chicken Halang halang</h2>
+                            <p class="price">&#8369; 160.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/Insane_Hot_Wings_720x.webp); background-size: cover;">
+                        <a href="f_all/spicywings.html" target="_self"
+                           data-transition="fade">
+                            <br>  <br>
+                            <h2 class="dish">Spicy Wings</h2>
+                            <p class="price">&#8369; 250.00</p>
+                        </a> 
+                        <div class="stars" style="margin-bottom: 1px;">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/kawlilechon.jpg); background-size: cover;">
+                        <a href="f_all/lechonkawali.html" target="_self"
+                           data-transition="fade">
+                            <br>  <br>
+                            <h2 class="dish">Lechon Kawali</h2>
+                            <p class="price">&#8369; 210.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/crispychew.jpeg); background-size: cover;">
+                        <a href="f_all/crispychewy.html" target="_self"
+                           data-transition="fade">
+                          <br>
+                            <h2 class="dish">Chewy Crispy Pork</h2>
+                            <p class="price">&#8369; 220.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/sinigangnababoy.webp); background-size: cover;">
+                        <a href="f_all/sinigangbaboy.html" target="_self"
+                           data-transition="fade"> <br>
+                            <h2 class="dish">Sinigang na Baboy</h2>
+                            <p class="price">&#8369; 280.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/carbo.jpg); background-size: cover;">
+                        <a href="f_all/carbonara.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Carbonara</h2>
+                            <p class="price">&#8369; 110.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/nuggets.jpg); background-size: cover;">
+                        <a href="f_all/chickennugets.html" target="_self"
+                           data-transition="fade">
+                       <br>
+                            <h2 class="dish">Chicken Nuggets</h2>
+                            <p class="price">&#8369; 80.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/carbo.jpg); background-size: cover;">
+                        <a href="f_all/grilledchese.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Grilled Cheese</h2>
+                            <p class="price">&#8369; 80.00</p>
+                        </a> 
+                        <div class="stars"  style="padding-bottom: 5px;">
+                            <i class="fa fa-star" ></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/spa.jpg); background-size: cover;">
+                        <a href="f_all/tunapasta.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Tuna Pasta</h2>
+                            <p class="price">&#8369; 130.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/chop.jpg); background-size: cover;">
+                        <a href="f_all/chopsuey.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Chop Suey</h2>
+                            <p class="price">&#8369; 200.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/bam.jpg); background-size: cover;">
+                        <a href="f_all/bami.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Bam i</h2>
+                            <p class="price">&#8369; 170.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/bihon.jpg); background-size: cover;">
+                        <a href="f_all/bihon.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Bihon</h2>
+                            <p class="price">&#8369; 170.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/lomi.jpg); background-size: cover;">
+                        <a href="f_all/lomi.html" target="_self"
+                           data-transition="fade">
+                            <br>
+                            <h2 class="dish">Lomi</h2>
+                            <p class="price">&#8369; 170.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/nachos.jpg); background-size: cover;">
+                        <a href="f_all/nachos.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Nachos</h2>
+                            <p class="price">&#8369; 200.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/moza.jpg); background-size: cover;">
+                        <a href="f_all/mozaballs.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Moza Balls</h2>
+                            <p class="price">&#8369; 180.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/carbo.jpg); background-size: cover;">
+                        <a href="f_all/quesadilla.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Quesadilla</h2>
+                            <p class="price">&#8369; 220.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/tunawrap.jpg); background-size: cover;">
+                        <a href="f_all/tunawrap.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Tuna Wrap</h2>
+                            <p class="price">&#8369; 100.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul> 
+                    <li style="background-image: url(res/sprite-removebg-preview.png); background-size: cover;">
+                        <a href="f_all/sprite.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2  class="dish">Sprite</h2>
+                            <p  class="price">&#8369; 40.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div> 
+                    </li> 
+                </ul>
+            </div> 
+        </div>   
+    </div>
+    <div class="bottom-nav" style="position: fixed; ">
+        <a href="#page1" target="_self" class="nav-item tm1" 
+        style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;" ></span> <br> Home</a>
+        <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(148, 116, 88); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-search"></span> <br>Search</a>
+        <a href="#page6" target="_self" class="nav-item tm2" style="color: rgb(255, 255, 255); "><span class="fas fa-heart"></span> <br>Favorite</a>
+        <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); "><span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+   </div>
+</div>
+<!-- start page 5a -->
+<div data-role="page" class="page" id="page5a">
+    <div data-role="panel" id="overlaypanel4a" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+           <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#" data-rel="close"  id="exitButton4">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext">Exit App</span>
+        </a>
+    
+<script>
+document.getElementById("exitButton4").addEventListener("click", function(event) {
+  event.preventDefault(); 
+  var confirmation = confirm("Are you sure you want to exit this app?");
+  if (confirmation) {
+      window.location.href = "about:blank"; 
+  }
+});</script>
+    </div>
+    <div role="header" class="header" >
+        <a href="#overlaypanel4a" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold; position:fixed;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+         </a>
+        
+         <a href="#" target="_self" class="head"style="margin-top: -8px; 
+        margin-left: 260px; padding: 0px; 
+         font-size: 0px; background-color:transparent;">
+           <select id="language-select6" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+            <option value="#">En</option>
+            <option value="wwwfil/index.html#page5a">Fil</option>
+        </select>
+        </a>
+        <script>
+            document.getElementById('language-select6').addEventListener('change', function() {
+                var selectedOption = this.options[this.selectedIndex];
+                var url = selectedOption.value;
+                window.location.href = url; 
+            });
+        </script>
+         <br><br> 
+         <input type="text" id="search1" placeholder="Search.." >
+<div class="filter"> 
+    <a href="#page5" target="_self" class="search" style="color: white;" >All</a>
+    <a href="#page5a" target="_self" class="search" style="color: #fff;  background-color: maroon;">Seafood</a>
+    <a href="#page5c" target="_self" class="search" style="color: white;">Poultry</a>
+    <a href="#page5d" target="_self" class="search" style="color: white;">Noodles</a>
+    <a href="#page5f" target="_self" class="search" style="color: white;">Snacks</a>
+    <a href="#page5b" target="_self" class="search" style="color: white;">Drinks</a>
+    <a href="#page5e" target="_self" class="search" style="color: white;">Rice</a>
+</div>   
+    </div>
+        <div role="main" class="content" style="margin-top: 150px;" >  
+              <div class="ui-grid-a" style="margin-top: 10px;">
+                <div class="ui-block-a">
+                    <ul>
+                        <li style="background-image: url(res/bilabid.jpg); background-size: cover;">
+                        
+                            <a href="f_seafood/bilabid.html" target="_self" data-transition="fade">
+                                <br> <br>
+                                <h2 class="dish">Spicy Bilabid</h2>
+                                <p class="price">&#8369; 230.00</p>
+                            </a> <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="ui-block-b">
+                    <ul>
+                        <li style="background-image: url(res/fishkang.jpg); background-size: cover;">
+                        
+                            <a href="f_seafood/fishkangkong.html" target="_self" data-transition="fade">
+                                <br> <br> 
+                                <h2 class="dish">Fish Kangkong</h2>
+                                <p class="price">&#8369; 220.00</p>
+                            </a> <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="ui-block-a"  >
+                    <ul>
+                        <li style="background-image: url(res/grilled-tuna-belly-7-730x973.jpg); background-size: cover;">
+                            <a href="f_seafood/tunabelly.html" target="_self"
+                               data-transition="fade">
+                              <br> 
+                                <h2 class="dish" >Grilled Tuna Belly</h2>
+                                <p class="price" style="background: green;
+                                display: inline-block; padding-left: 5px; padding-right: 5px;">&#8369; 230-270</p>
+                            </a> 
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="ui-block-b">
+                 <ul>
+                        <li style="background-image: url(res/grilltunapnagf.jpg); background-size: cover;">
+                            <a href="f_seafood/tunapanga.html" target="_self"
+                            data-transition="fade">
+                             <br>
+                             <h2 class="dish">Grilled Tuna Panga</h2>
+                             <p class="price">&#8369; 230-270</p>
+                           
+                         <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star none"></i>
+                        </div>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="ui-block-a">
+                    <ul>
+                        <li style="background-image: url(res/crab.jpg); background-size: cover;">
+                        
+                            <a href="f_seafood/chilicrab.html" target="_self" data-transition="fade">
+                                <br> <br>
+                                <h2 class="dish">Chili  Crab</h2> 
+                                <p class="price" style="padding-bottom: 6px;">&#8369; 270.00</p>
+                            </a> <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> 
+                <div class="ui-block-b">
+                    <ul>
+                        <li style="background-image: url(res/seacocum.jpg); background-size: cover;">
+                        
+                            <a href="f_seafood/seacocumber.html" target="_self" data-transition="fade">
+                             <br>
+                                <h2 class="dish">Braised Sea Cocumber</h2>
+                                <p class="price">&#8369; 300.00</p>
+                            </a> <div class="stars" >
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> 
+                <div class="ui-block-a">
+                    <ul>
+                        <li style="background-image: url(res/binga.jpg); background-size: cover;">
+                        <a href="f_seafood/spicybinga.html" target="_self" data-transition="fade">
+                                <br> <br>
+                                <h2 class="dish">Spicy Binga</h2> 
+                                <p class="price">&#8369; 160.00</p>
+                            </a> <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> 
+                <div class="ui-block-b">
+                    <ul>
+                        <li style="background-image: url(res/creamyf.jpg); background-size: cover;">
+                         <a href="f_seafood/creamyfish.html" target="_self" data-transition="fade">
+                                <br> 
+                                <h2  class="dish" >Creamy Fish Fillet</h2> 
+                                <p class="price">&#8369; 190.00</p>
+                            </a>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> 
+                <div class="ui-block-a">
+                    <ul>
+                        <li style="background-image: url(res/kalamarisss.jpg); background-size: cover;">
+                        
+                            <a href="f_seafood/kalamariss&s.html" target="_self" data-transition="fade">
+                                <br> 
+                                <h2  class="dish" >Kalamaris Sweet & Spicy</h2> 
+                                <p  class="price" >&#8369; 230.00</p>
+                            </a> <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> 
+                <div class="ui-block-b">
+                    <ul>
+                        <li style="background-image: url(res/kalamarisorig.jpg); background-size: cover;">
+                        
+                            <a href="f_seafood/kalamarisorig.html" target="_self" data-transition="fade">
+                                <br> 
+                                <h2  class="dish" >Kalamaris Original</h2> 
+                                <p  class="price" >&#8369; 220.00</p>
+                            </a> <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> 
+    
+                <div class="ui-block-a">
+                    <ul>
+                        <li style="background-image: url(res/scallop.jpg); background-size: cover;">
+                         <a href="f_seafood/scallop.html" target="_self" data-transition="fade">
+                                <br> 
+                                <h2 class="dish">Creamy Spicy Scallop</h2> 
+                                <p class="price">&#8369; 160.00</p>
+                            </a> <div class="stars">
+                                <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star none"></i>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> 
+            </div>  
+            
+            
+        </div>
+        <div class="bottom-nav" style="position: fixed; ">
+            <a href="#page1" target="_self" class="nav-item tm1" 
+            style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;" ></span> <br> Home</a>
+            <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(148, 116, 88); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-search"></span> <br>Search</a>
+            <a href="#page6" target="_self" class="nav-item tm2" style="color: rgb(255, 255, 255); "><span class="fas fa-heart"></span> <br>Favorite</a>
+            <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); "><span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+       </div>
+    </div>
+<!-- page5a end --> 
+<!-- page5b start -->
+<div data-role="page" class="page" id="page5b">
+    <div data-role="panel" id="overlaypanel4b" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#" data-rel="close"  id="exitButton5">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext">Exit App</span>
+        </a>
+    
+<script>
+document.getElementById("exitButton5").addEventListener("click", function(event) {
+  event.preventDefault(); 
+  var confirmation = confirm("Are you sure you want to exit this app?");
+  if (confirmation) {
+      window.location.href = "about:blank"; 
+  }
+});</script>
+    </div>
+    <div role="header" class="header" >
+        <a href="#overlaypanel4b" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold; position:fixed;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+         </a>
+        
+         <a href="#" target="_self" class="head"style="margin-top: -8px; 
+         margin-left: 260px; padding: 0px; 
+          font-size: 0px; background-color:transparent;">
+            <select id="language-select7" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+             <option value="#">En</option>
+             <option value="wwwfil/index.html#page5b">Fil</option>
+         </select>
+         </a>
+         <script>
+             document.getElementById('language-select7').addEventListener('change', function() {
+                 var selectedOption = this.options[this.selectedIndex];
+                 var url = selectedOption.value;
+                 window.location.href = url; 
+             });
+         </script>
+         <br><br> 
+         <input type="text" id="search2" placeholder="Search.." >
+<div class="filter"> 
+    <a href="#page5" target="_self" class="search" style="color: white;" >All</a>
+    <a href="#page5a" target="_self" class="search" style="color: #fff;  ">Seafood</a>
+    <a href="#page5c" target="_self" class="search" style="color: white;">Poultry</a>
+    <a href="#page5d" target="_self" class="search" style="color: white;">Noodles</a>
+    <a href="#page5f" target="_self" class="search" style="color: white;">Snacks</a>
+    <a href="#page5b" target="_self" class="search" style="color: white; background-color: maroon;">Drinks</a>
+    <a href="#page5e" target="_self" class="search" style="color: white;">Rice</a>
+</div>   
+    </div>
+        <div role="main" class="content" style="margin-top: 150px;" >  
+              <div class="ui-grid-a" style="margin-top: 10px;">
+            
+            <div class="ui-block-a"  >
+                <ul>
+                    <li style="background-image: url(res/mountain1.jpg); background-size: cover;">
+                        <a href="f_Drinks/mountain.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Mountain Dew</h2>
+                            <p class="price">&#8369; 40.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/royyy-removebg-preview.png); background-size: cover;">
+                        <a href="f_Drinks/royal.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Royal</h2>
+                            <p  class="price">&#8369; 40.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul> 
+                    <li style="background-image: url(res/sprite-removebg-preview.png); background-size: cover;">
+                        <a href="f_Drinks/sprite.html" target="_self"
+                           data-transition="fade">
+                            <br>  <br>
+                            <h2  class="dish">Sprite</h2>
+                            <p  class="price">&#8369; 40.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div> 
+                    </li> <br>
+                </ul>
+            </div> 
+        </div>  
+    </div>
+    
+    <div class="bottom-nav" style="position: fixed; ">
+        <a href="#page1" target="_self" class="nav-item tm1" 
+        style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;" ></span> <br> Home</a>
+        <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(148, 116, 88); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-search"></span> <br>Search</a>
+        <a href="#page6" target="_self" class="nav-item tm2" style="color: rgb(255, 255, 255); "><span class="fas fa-heart"></span> <br>Favorite</a>
+        <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); ">
+            <span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+       
+    </div>
+</div>
+<!-- page5b end --> <!-- page5c start -->
+<div data-role="page" class="page" id="page5c">
+    <div data-role="panel" id="overlaypanel4c" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#" data-rel="close"  id="exitButton6">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext">Exit App</span>
+        </a>
+    
+<script>
+document.getElementById("exitButton6").addEventListener("click", function(event) {
+  event.preventDefault(); 
+  var confirmation = confirm("Are you sure you want to exit this app?");
+  if (confirmation) {
+      window.location.href = "about:blank"; 
+  }
+});</script>
+    </div>
+    <div role="header" class="header" >
+        <a href="#overlaypanel4c" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold; position:fixed;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+         </a>
+         <a href="#" target="_self" class="head"style="margin-top: -8px; 
+         margin-left: 260px; padding: 0px; 
+          font-size: 0px; background-color:transparent;">
+            <select id="language-select8" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+             <option value="#">En</option>
+             <option value="wwwfil/index.html#page5c">Fil</option>
+         </select>
+         </a>
+         <script>
+             document.getElementById('language-select8').addEventListener('change', function() {
+                 var selectedOption = this.options[this.selectedIndex];
+                 var url = selectedOption.value;
+                 window.location.href = url; 
+             });
+         </script>
+         <br><br> 
+         <input type="text" id="search3" placeholder="Search.." >
+        <div class="filter"> 
+            <a href="#page5" target="_self" class="search" style="color: white; ">All</a>
+                <a href="#page5a" target="_self" class="search" style="color: #fff;">Seafood</a>
+                 <a href="#page5c" target="_self" class="search" style="color: white; 
+                  background-color: maroon;">Poultry</a>
+                <a href="#page5d" target="_self" class="search" style="color: white;">Noodles</a>
+                <a href="#page5f" target="_self" class="search" style="color: white;">Snacks</a>
+                <a href="#page5b" target="_self" class="search" style="color: white;">Drinks</a>
+               <a href="#page5e" target="_self" class="search" style="color: white;">Rice</a>
+            </div>   
+    </div>
+        <div role="main" class="content" style="margin-top: 150px;" >  
+              <div class="ui-grid-a" style="margin-top: 10px;"> 
+            <div class="ui-block-a"  >
+                <ul>
+                    <li style="background-image: url(res/steak1.jpg); background-size: cover;">
+                        <a href="f_pork/burgersteak.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Burger Steak</h2>
+                            <p class="price">&#8369; 130.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/sisig.webp); background-size: cover;">
+                        <a href="f_pork/porksisig.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Pork Sisig</h2>
+                            <p class="price">&#8369; 160.00</p>
+                        </a> 
+                        <div class="stars" style="padding-bottom: 2px;">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/psteak.jpg); background-size: cover;">
+                        <a href="f_pork/porksteak.html" target="_self"
+                           data-transition="fade">
+                            <br>  <br>
+                            <h2 class="dish">Pork Steak</h2>
+                            <p class="price">&#8369; 220.00</p>
+                        </a> 
+                        <div class="stars"  style="margin-bottom: 3px;">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/chalanghalang.jpg); background-size: cover;">
+                        <a href="f_pork/chickenhalang.html" target="_self"
+                           data-transition="fade"> <br>
+                            <h2 class="dish">Chicken Halang halang</h2>
+                            <p class="price">&#8369; 160.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/Insane_Hot_Wings_720x.webp); background-size: cover;">
+                        <a href="f_pork/spicywings.html" target="_self"
+                           data-transition="fade">
+                            <br>  <br>
+                            <h2 class="dish">Spicy Wings</h2>
+                            <p class="price">&#8369; 250.00</p>
+                        </a> 
+                        <div class="stars" style="margin-bottom: 1px;">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/kawlilechon.jpg); background-size: cover;">
+                        <a href="f_pork/lechonkawali.html" target="_self"
+                           data-transition="fade">
+                            <br>  <br>
+                            <h2 class="dish">Lechon Kawali</h2>
+                            <p class="price">&#8369; 210.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/crispychew.jpeg); background-size: cover;">
+                        <a href="f_pork/crispychewy.html" target="_self"
+                           data-transition="fade">
+                          <br>
+                            <h2 class="dish">Chewy Crispy Pork</h2>
+                            <p class="price">&#8369; 220.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/sinigangnababoy.webp); background-size: cover;">
+                        <a href="f_pork/sinigangbaboy.html" target="_self"
+                           data-transition="fade"> <br>
+                            <h2 class="dish">Sinigang na Baboy</h2>
+                            <p class="price">&#8369; 280.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>   
+    </div>
+    <div class="bottom-nav" style="position: fixed; ">
+        <a href="#page1" target="_self" class="nav-item tm1" 
+        style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;" ></span> <br> Home</a>
+        <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(148, 116, 88); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-search"></span> <br>Search</a>
+        <a href="#page6" target="_self" class="nav-item tm2" style="color: rgb(255, 255, 255); "><span class="fas fa-heart"></span> <br>Favorite</a>
+        <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); "><span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+       
+    </div>
+</div>
+<!-- page5c end -->
+<!-- Page5d start -->
+<div data-role="page" class="page" id="page5d">
+    <div data-role="panel" id="overlaypanel4d" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#" data-rel="close"  id="exitButton7">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext">Exit App</span>
+        </a>
+    
+<script>
+document.getElementById("exitButton7").addEventListener("click", function(event) {
+  event.preventDefault(); 
+  var confirmation = confirm("Are you sure you want to exit this app?");
+  if (confirmation) {
+      window.location.href = "about:blank"; 
+  }
+});</script>
+    </div>
+    <div role="header" class="header" >
+        <a href="#overlaypanel4d" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold; position:fixed;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+         </a>
+         <a href="#" target="_self" class="head"style="margin-top: -8px; 
+         margin-left: 260px; padding: 0px; 
+          font-size: 0px; background-color:transparent;">
+            <select id="language-select9" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+             <option value="#">En</option>
+             <option value="wwwfil/index.html#page5d">Fil</option>
+         </select>
+         </a>
+         <script>
+             document.getElementById('language-select9').addEventListener('change', function() {
+                 var selectedOption = this.options[this.selectedIndex];
+                 var url = selectedOption.value;
+                 window.location.href = url; 
+             });
+         </script>
+         <br><br> 
+         <input type="text" id="search4" placeholder="Search.." >
+        <div class="filter"> 
+            <a href="#page5" target="_self" class="search" style="color: white; ">All</a>
+                <a href="#page5a" target="_self" class="search" style="color: #fff;">Seafood</a>
+                 <a href="#page5c" target="_self" class="search" style="color: white;">Poultry</a>
+                <a href="#page5d" target="_self" class="search" style="color: white;  background-color: maroon;">Noodles</a>
+                <a href="#page5f" target="_self" class="search" style="color: white;">Snacks</a>
+                <a href="#page5b" target="_self" class="search" style="color: white;">Drinks</a>
+               <a href="#page5e" target="_self" class="search" style="color: white;">Rice</a>
+            </div>   
+    </div>
+        <div role="main" class="content" style="margin-top: 150px;" >  
+              <div class="ui-grid-a" style="margin-top: 10px;">
+            <div class="ui-block-a"  >
+                <ul>
+                    <li style="background-image: url(res/chop.jpg); background-size: cover;">
+                        <a href="f_Noodles/chopsuey.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Chop Suey</h2>
+                            <p class="price">&#8369; 200.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/bam.jpg); background-size: cover;">
+                        <a href="f_Noodles/bami.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Bam i</h2>
+                            <p class="price">&#8369; 170.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/bihon.jpg); background-size: cover;">
+                        <a href="f_Noodles/bihon.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Bihon</h2>
+                            <p class="price">&#8369; 170.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/lomi.jpg); background-size: cover;">
+                        <a href="f_Noodles/lomi.html" target="_self"
+                           data-transition="fade">
+                            <br>
+                            <h2 class="dish">Lomi</h2>
+                            <p class="price">&#8369; 170.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>   
+    </div>
+    <div class="bottom-nav" style="position: fixed; ">
+        <a href="#page1" target="_self" class="nav-item tm1" 
+        style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;" ></span> <br> Home</a>
+        <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(148, 116, 88); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-search"></span> <br>Search</a>
+        <a href="#page6" target="_self" class="nav-item tm2" style="color: rgb(255, 255, 255); "><span class="fas fa-heart"></span> <br>Favorite</a>
+        <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); "><span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+    </div>
+</div>
+<!-- page5d eend -->
+<!-- page5e start -->
+<div data-role="page" class="page" id="page5e">
+    <div data-role="panel" id="overlaypanel4e" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#" data-rel="close"  id="exitButton8">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext">Exit App</span>
+        </a>
+<script>
+document.getElementById("exitButton8").addEventListener("click", function(event) {
+  event.preventDefault(); 
+  var confirmation = confirm("Are you sure you want to exit this app?");
+  if (confirmation) {
+      window.location.href = "about:blank"; 
+  }
+});</script>
+    </div>
+    <div role="header" class="header" >
+        <a href="#overlaypanel4e" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold; position:fixed;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+         </a>
+         <a href="#" target="_self" class="head"style="margin-top: -8px; 
+         margin-left: 260px; padding: 0px; 
+          font-size: 0px; background-color:transparent;">
+            <select id="language-select10" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+             <option value="#">En</option>
+             <option value="wwwfil/index.html#page5e">Fil</option>
+         </select>
+         </a>
+         <script>
+             document.getElementById('language-select10').addEventListener('change', function() {
+                 var selectedOption = this.options[this.selectedIndex];
+                 var url = selectedOption.value;
+                 window.location.href = url; 
+             });
+         </script>
+         <br><br> 
+         <input type="text" id="search5" placeholder="Search.." >
+        <div class="filter"> 
+            <a href="#page5" target="_self" class="search" style="color: white; ">All</a>
+                <a href="#page5a" target="_self" class="search" style="color: #fff;">Seafood</a>
+                 <a href="#page5c" target="_self" class="search" style="color: white;">Poultry</a>
+                <a href="#page5d" target="_self" class="search" style="color: white;">Noodles</a>
+                <a href="#page5f" target="_self" class="search" style="color: white;">Snacks</a>
+                <a href="#page5b" target="_self" class="search" style="color: white;">Drinks</a>
+               <a href="#page5e" target="_self" class="search" style="color: white;  background-color: maroon;">Rice</a>
+            </div>   
+    </div>
+        <div role="main" class="content" style="margin-top: 150px;" >  
+              <div class="ui-grid-a" style="margin-top: 10px;"> 
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/plain.jpg); background-size: cover;">
+                        <a href="f_rice/plainrice.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2  class="dish">Plain Rice</h2>
+                            <p  class="price">&#8369; 20.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/friedrice.jpg); background-size: cover;">
+                        <a href="f_rice/friedrice.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2  class="dish">Fried Rice</h2>
+                            <p  class="price">&#8369; 120.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/mongolainfriedrice.jpg); background-size: cover;">
+                        <a href="f_rice/Mfriedrice.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2  class="dish">Mongolian Fried Rice</h2>
+                            <p  class="price">&#8369; 280.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>   
+    </div>
+    
+    <div class="bottom-nav" style="position: fixed; ">
+        <a href="#page1" target="_self" class="nav-item tm1" 
+        style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;" ></span> <br> Home</a>
+        <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(148, 116, 88); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-search"></span> <br>Search</a>
+        <a href="#page6" target="_self" class="nav-item tm2" style="color: rgb(255, 255, 255); "><span class="fas fa-heart"></span> <br>Favorite</a>
+        <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); "><span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+       
+    </div>
+</div>
+<!-- page5e end -->
+<!-- page 5f start -->
+<!-- page5e start -->
+<div data-role="page" class="page" id="page5f">
+    <div data-role="panel" id="overlaypanel4f" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#" data-rel="close"  id="exitButton9">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext">Exit App</span>
+        </a>
+<script>
+document.getElementById("exitButton9").addEventListener("click", function(event) {
+  event.preventDefault(); 
+  var confirmation = confirm("Are you sure you want to exit this app?");
+  if (confirmation) {
+      window.location.href = "about:blank"; 
+  }
+});</script>
+    </div>
+    <div role="header" class="header" >
+        <a href="#overlaypanel4f" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold; position:fixed;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+         </a>
+         <a href="#" target="_self" class="head"style="margin-top: -8px; 
+         margin-left: 260px; padding: 0px; 
+          font-size: 0px; background-color:transparent;">
+            <select id="language-select11" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+             <option value="#">En</option>
+             <option value="wwwfil/index.html#page5f">Fil</option>
+         </select>
+         </a>
+         <script>
+             document.getElementById('language-select11').addEventListener('change', function() {
+                 var selectedOption = this.options[this.selectedIndex];
+                 var url = selectedOption.value;
+                 window.location.href = url; 
+             });
+         </script>
+         <br><br> 
+         <input type="text" id="search6" placeholder="Search.." >
+        <div class="filter"> 
+            <a href="#page5" target="_self" class="search" style="color: white; ">All</a>
+                <a href="#page5a" target="_self" class="search" style="color: #fff;">Seafood</a>
+                 <a href="#page5c" target="_self" class="search" style="color: white;">Poultry</a>
+                <a href="#page5d" target="_self" class="search" style="color: white;">Noodles</a>
+                <a href="#page5f" target="_self" class="search" style="color: white;  background-color: maroon;">Snacks</a>
+                <a href="#page5b" target="_self" class="search" style="color: white;">Drinks</a>
+               <a href="#page5e" target="_self" class="search" style="color: white; ">Rice</a>
+            </div>   
+    </div>
+        <div role="main" class="content" style="margin-top: 150px;" >  
+              <div class="ui-grid-a" style="margin-top: 10px;"> 
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/fries.jpg); background-size: cover;">
+                        <a href="f_snacks/fries.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Fries</h2>
+                            <p class="price">&#8369; 65.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/spa.jpg); background-size: cover;">
+                        <a href="f_snacks/spaghetti.html" target="_self"
+                           data-transition="fade">
+                            <br> <br>
+                            <h2 class="dish">Spaghetti</h2>
+                            <p class="price">&#8369; 80.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/carbo.jpg); background-size: cover;">
+                        <a href="f_snacks/carbonara.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Carbonara</h2>
+                            <p class="price">&#8369; 110.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/nuggets.jpg); background-size: cover;">
+                        <a href="f_snacks/chickennugets.html" target="_self"
+                           data-transition="fade">
+                       
+                            <h2 class="dish">Chicken Nuggets</h2>
+                            <p class="price">&#8369; 80.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/carbo.jpg); background-size: cover;">
+                        <a href="f_snacks/grilledchese.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Grilled Cheese</h2>
+                            <p class="price">&#8369; 80.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/spa.jpg); background-size: cover;">
+                        <a href="f_snacks/tunapasta.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Tuna Pasta</h2>
+                            <p class="price">&#8369; 130.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/nachos.jpg); background-size: cover;">
+                        <a href="f_snacks/nachos.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Nachos</h2>
+                            <p class="price">&#8369; 200.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/moza.jpg); background-size: cover;">
+                        <a href="f_snacks/mozaballs.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Moza Balls</h2>
+                            <p class="price">&#8369; 180.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-a">
+                <ul>
+                    <li style="background-image: url(res/carbo.jpg); background-size: cover;">
+                        <a href="f_snacks/quesadilla.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Quesadilla</h2>
+                            <p class="price">&#8369; 220.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-block-b">
+                <ul>
+                    <li style="background-image: url(res/tunawrap.jpg); background-size: cover;">
+                        <a href="f_snacks/tunawrap.html" target="_self"
+                           data-transition="fade">
+                            <br> 
+                            <h2 class="dish">Tuna Wrap</h2>
+                            <p class="price">&#8369; 100.00</p>
+                        </a> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+          
+        </div> 
+    </div>
+    
+    <div class="bottom-nav" style="position: fixed; ">
+        <a href="#page1" target="_self" class="nav-item tm1" 
+        style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;" ></span> <br> Home</a>
+        <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(148, 116, 88); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-search"></span> <br>Search</a>
+        <a href="#page6" target="_self" class="nav-item tm2" style="color: rgb(255, 255, 255); "><span class="fas fa-heart"></span> <br>Favorite</a>
+        <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); "><span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+       
+    </div>
+</div>
+<!-- page 5f end -->
+<div data-role="page" class="page" id="page6">
+    <div data-role="panel" id="overlaypanel5" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+          
+            <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#close" data-rel="close"  id="exitButton">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext" id="exitButton">Exit App</span>
+        </a>
+       
+    </div>
+    <div role="header" class="header" data-position="fixed" style="padding-bottom: 30px;">
+        <a href="#overlaypanel5" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+        </a>
+        <a href="#" target="_self" class="head"style="margin-top: -8px; 
+         margin-left: 260px; padding: 0px; 
+          font-size: 0px; background-color:transparent;">
+            <select id="language-select12" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+             <option value="#">En</option>
+             <option value="wwwfil/index.html#page6">Fil</option>
+         </select>
+         </a>
+         <script>
+             document.getElementById('language-select12').addEventListener('change', function() {
+                 var selectedOption = this.options[this.selectedIndex];
+                 var url = selectedOption.value;
+                 window.location.href = url; 
+             });
+         </script>
+         <br>
+     </div>
+    <div role="main" class="content" style="margin-top: 80px !important;">
+        <h2 style="text-align: center; margin-bottom: 25px; margin-top: -10px; 
+        color: #041423; font-size: 24px;">Favorites</h2>
+       
+  <ul data-role="listview" data-inset="true">
+    <li>
+         <a href="f_favorite/bilabid.html" target="_self" data-position-to="windows" 
+                data-transition="none" style="background-color: none;">
+                <img src="res/bilabid.jpg" width="80px" height="100%">
+        
+        <h2 style="color: black;">1. Bilabid</h2>
+    </a>
+    </li>
+</ul>
+
+<ul data-role="listview" data-inset="true">
+    <li>
+         <a href="f_favorite/seacocumber.html" target="_self" data-position-to="windows" 
+                data-transition="none" style="background-color: none;">
+                <img src="res/seacocum.jpg" width="80px" height="100%">
+        
+        <h2 style="color: black;">2. Braised Sea Cocumber</h2>
+    </a>
+    </li>
+</ul>
+<ul data-role="listview" data-inset="true">
+    <li>
+         <a href="f_rice/Mfriedrice.html" target="_self" data-position-to="windows" 
+                data-transition="none" style="background-color: none;">
+                <img src="res/mongolainfriedrice.jpg" width="80px" height="100%">
+        
+        <h2 style="color: black;">3. Mongolian Fried Rice</h2>
+    </a>
+    </li>
+</ul>
+<ul data-role="listview" data-inset="true">
+    <li>
+         <a href="f_favorite/chilicrab.html" target="_self" data-position-to="windows" 
+                data-transition="none" style="background-color: none;">
+        <img src="res/crab.jpg" width="80px" height="100%">
+        <h2 style="color: black;">4. Chili Crab</h2>
+    </a>
+    </li>
+</ul>
+    </div>
+    <div class="bottom-nav">
+        <a href="#page1" target="_self" class="nav-item tm1" 
+        style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;"  ></span> <br> Home</a>
+        <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(255, 255, 255); " ><span class="fas fa-search"></span> <br>Search</a>
+        <a href="#page6" target="_self" class="nav-item tm2"style="color: rgb(148, 116, 88); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-heart"></span> <br>Favorite</a>
+        <a href="#page7" target="_self" class="nav-item" style="color: rgb(255, 255, 255); "><span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+    </div>
+</div>
+<div data-role="page" class="page" id="page7">
+    <div data-role="panel" id="overlaypanel6" class="overlay-panel" data-dismissible="false" data-position="left" 
+    data-display="overlay">
+      <i class="fas fa-times navicon1" data-rel="close" style="color: black;" ></i>
+        <div class="title1">
+           <img src="res/logo.png" width="140px" height="140px"><br><br>
+        </div>
+        <a href="#page1" target="_self" >
+            <i class="fas fa-home navicon" ></i>
+            <span class="navtext" >Home</span>
+        </a>
+        <a href="#page2" target="_self">
+            <i class="fas fa-phone navicon"></i>
+            <span class="navtext">Contact Us</span>
+        </a>
+        <a href="#page3" target="_self">
+            <i class="fas fa-info-circle navicon" ></i>
+            <span class="navtext" >About</span>
+        </a>
+
+        <a href="#page4" target="_self">
+            <i class="fas fa-user navicon"></i>
+            <span class="navtext">Developer Info</span>
+        </a>
+        <br><br><br><br><br><br>
+        <a href="#close" data-rel="close"  id="exitButton">
+            <i class="fas fa-sign-out-alt navicon"></i>
+            <span class="navtext" id="exitButton">Exit App</span>
+        </a>
+    </div>
+    <div role="header" class="header" data-position="fixed" style="padding-bottom: 30px;">
+        <a href="#overlaypanel6" class="head" target="_self" 
+        style="color: black; font-size: 22px; font-weight: bold;">
+            <svg width="32" height="24" viewBox="0 0 20 20" fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" 
+                d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+            </svg>
+        </a>
+        <a href="#" target="_self" class="head"style="margin-top: -8px; 
+         margin-left: 260px; padding: 0px; 
+          font-size: 0px; background-color:transparent;">
+            <select id="language-select13" style="background-color: rgb(206, 200, 192); color: #000; border: 2px solid #000; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+             <option value="#">En</option>
+             <option value="wwwfil/index.html#page7">Fil</option>
+         </select>
+         </a>
+         <script>
+             document.getElementById('language-select13').addEventListener('change', function() {
+                 var selectedOption = this.options[this.selectedIndex];
+                 var url = selectedOption.value;
+                 window.location.href = url; 
+             });
+         </script>
+     </div>
+    <div role="main" class="content" style=" margin-top: 68px !important;">
+       
+        <h2 style="text-align: center; margin-top: 0; color: #041423; font-size: 24px;">Cart List</h2>
+      <br> 
+       <ul data-role="listview" data-inset="true">
+        <li>
+             <a href="f_cartlist/creamyfish.html" target="_self" data-position-to="windows" 
+                    data-transition="none" style="background-color: none;">
+                    <img src="res/creamyf.jpg" width="80px" height="100%">
+            <h2 style="color: black;">1. Creamy Fish Fillet</h2>
+            <p style="color: #333; font-size: 14px;">&#8369; 190.00</p>
+            </a>
+        </li>
+    </ul>
+    <ul data-role="listview" data-inset="true">
+        <li>
+             <a href="f_cartlist/fishkangkong.html" target="_self" data-position-to="windows" 
+                    data-transition="none" style="background-color: none;">
+                    <img src="res/fishkang.jpg" width="80px" height="100%">
+            
+            <h2 style="color: black;">2. Fish Kangkong</h2>
+            <p style="color: #333; font-size: 14px;">&#8369; 220.00</p>
+        </a>
+        </li>
+    </ul>
+    <ul data-role="listview" data-inset="true">
+        <li>
+             <a href="f_cartlist/chilicrab.html" target="_self" data-position-to="windows" 
+                    data-transition="none" style="background-color: none;">
+                    <img src="res/crab.jpg" width="80px" height="100%">
+            
+            <h2 style="color: black;">3. Chili Crab</h2>
+            <p style="color: #333; font-size: 14px;">&#8369; 270.00</p>
+        </a>
+        </li>
+    </ul>
+    <ul data-role="listview" data-inset="true">
+        <li>
+             <a href="f_cartlist/scallop.html" target="_self" data-position-to="windows" 
+                    data-transition="none" style="background-color: none;">
+                    <img src="res/scallop.jpg" width="80px" height="100%">
+            
+            <h2 style="color: black;">4. Creamy Spicy Scallop</h2>
+            <p style="color: #333; font-size: 14px;">&#8369; 160.00</p>
+        </a>
+        </li>
+    </ul>
+    <br>
+    <h2 style="color: rgb(190, 20, 20) !important; text-align: right; margin-right: 10px; 
+    padding-bottom: 10px; font-weight: bolder;"><strong>Total:</strong> &#8369; 840.00</h2>
+    <button type="submit" style="background-color: #128629 !important; color: white;">Checkout</button>
+    </div>
+    <div class="bottom-nav">
+        <a href="#page1" target="_self" class="nav-item tm1" 
+        style="color: rgb(255, 255, 255); "> <span class="fas fa-home hm" style=" margin-left: 5px;"  ></span> <br> Home</a>
+        <a href="#page5" target="_self"  class="nav-item tm2" style="color: rgb(255, 255, 255); " ><span class="fas fa-search"></span> <br>Search</a>
+        <a href="#page6" target="_self" class="nav-item tm2" style="color: rgb(255, 255, 255); text-decoration: none; outline: none; outline-offset: 0cap;"><span class="fas fa-heart"></span> <br>Favorite</a>
+        <a href="#page7" target="_self" class="nav-item" style="color:rgb(148, 116, 88); "><span class="fas fa-shopping-cart"></span> <br>Cartlist</a>
+    </div>
+</div>
+<script src="js/search.js"></script>
+</body>
+</html>

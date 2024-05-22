@@ -1,0 +1,299 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    top: 0;
+    padding: 17px;
+    padding-bottom: 0px ;
+    background-color: white;
+    position: fixed;
+    width: calc(100% - 30px); /* Subtract the total left and right padding */
+    z-index: 1000;
+    transition: top 0.3s;
+} 
+.header .head {
+    position: absolute !important; /* Use relative positioning instead of absolute */
+    left: 10px !important;
+    margin-right: 40px !important;
+    top: 20px !important;
+    color: #000;
+    text-decoration: none;
+    margin-left: 3px;
+}
+#search {
+    position: relative;
+    display: block; /* Make the search bar a block element to occupy its own line */
+    width: 100%; /* Make the search bar span the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.header .filter{
+    text-align: center;
+   
+    display: flex;
+    justify-content:space-evenly;
+    overflow-x: auto; 
+    padding: 0px;
+    text-decoration: none;
+   padding-bottom: 10px;
+}
+.header .search {
+    padding: 4px;
+    border-radius: 3px;
+    background-color: rgb(154, 140, 140);
+    text-decoration: none;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    padding: 10px;
+    margin-right: 5px;
+     padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+.page1, .page2, .page3, .page4, .page5a, .page5b, .page5c, .page5d, .page5d, .page5e{
+    background:white;
+}
+.content {
+    margin-top: 154px !important;
+    border-radius: 10px;
+    background: white;
+    margin-left: 10px;
+margin-right: 8px; 
+position: relative;
+margin-bottom: 90px;  
+} 
+h2, p {
+    color:whitesmoke;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px; 
+}
+p{ 
+    font-size: 10px;
+    font: .9em sans-serif;
+    text-shadow: 0 4px 8px rgba(18, 8, 2, 0);
+}
+h2{
+   
+    font-size: 18px;
+    text-shadow: 0 4px 8px rgba(18, 8, 2, 0);
+    
+}
+.ui-grid-a {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto; 
+}
+.ui-block-a, .ui-block-b {
+    flex: 1 0 50%;
+    max-width: 50%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+}
+ul li {
+   background: radial-gradient(590px at 8.2% 13.8%, rgb(18, 35, 60) 0%,
+     rgb(48, 47, 47) 90%, navy 100%);
+    border-radius: 10px; 
+}
+ul li {
+    margin: 0px;
+    display: block;
+    padding: 10px; 
+    border-radius: 10px; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgb(165, 163, 163); 
+}
+ul li a{
+    text-decoration: none;
+}
+.content .fas{
+    margin-left: 86px;  font-size: 48px;
+    text-shadow: 0 4px 8px rgba(18, 8, 2, 0); 
+}
+.fa-shrimp{  color: red;   opacity: .8;  }  .fa-hamburger{ color: green;     }  .fa-bowl-rice{  color: #929597; }  .fa-drumstick-bite{
+    color: rgb(124, 63, 63);  } .fa-leaf{color: rgb(145, 145, 37); } .fa-beer{ color: blueviolet; }
+.fa-graduation-cap{
+    font-size: 40px;
+    color: brown; 
+    margin-left: 85px;
+    text-shadow: 0 4px 8px rgba(18, 8, 2, 0);  
+}
+.main {
+    margin-left: 12px; color: black; font-size: 14px;  
+    text-shadow: 0 4px 8px rgba(18, 8, 2, 0);
+    margin-right: 0px;
+    margin-top: 2px;
+    padding-top: 10px;
+}
+.main1 {
+    margin-left: 10px; color: black; font-size: 14px;  
+    text-shadow: 0 4px 8px rgba(18, 8, 2, 0);
+    margin-right: 0px;
+    margin-top: 0px;
+    padding: 0px;  
+}
+/* //  for the bottom nav styling */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #041423;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.nav-item {
+    margin: 10px;
+    text-decoration: none;
+    color: #f8f9fa;
+    justify-content: center; 
+}
+.bottom-nav a{
+    text-decoration: none;
+    color: #f8f9fa;
+    font-weight: lighter;
+    font-size: 12px;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+}
+.bottom-nav .fas  {
+text-align: center;
+justify-content: center;
+font-size: 18px;
+}   
+.hm{
+margin-left: 6px !important;
+}
+.fa-shopping-cart{ margin-left: 9px !important ;} 
+.fa-heart{margin-left: 14px;}
+.fa-search{margin-left: 10px;}
+.bottom-nav .tm2{
+margin-left: 20px;
+}
+.bottom-nav .tm1{
+margin-left: 15px;
+color: #f8f9fa;
+}
+/* styling for the overlay panel */
+.overlay-panel {
+position: absolute;
+top: 0;
+left: 0;
+width: 250px; 
+height: 100%;
+padding: 20px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.overlay-panel .close-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: gray;
+border: none;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+}
+.overlay-panel a {
+display: flex;
+align-items: center;
+padding: 10px;
+margin: 10px 0;
+text-decoration: none;
+color: #fff;
+background-color: #f5f5f5;
+border-radius: 5px;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+transition: background-color 0.3s, color 0.3s;
+text-shadow: 0 4px 8px rgba(18, 8, 2, 0); 
+font-weight: lighter;
+}
+.overlay-panel a:hover {
+background-color: #333333;
+color: white; 
+}
+.overlay-panel a:hover .navicon{
+color: white; 
+}
+.overlay-panel a:hover .navtext{
+color: white;
+}
+.overlay-panel p{
+font-size: 28px;
+color: white;
+text-align: end;
+margin-top: 0px;
+}
+.title1 img {
+border-radius: 100px;
+text-shadow: #6c757d;
+margin-left: 40px;
+}
+.navicon {
+font-size: 14px;
+color: black;
+font-weight: 0px;
+}
+.navicon i {
+margin-right: 12px;
+text-align: left; 
+transition: color 0.3s;
+}
+.navtext {
+flex-grow: 1; /* Take remaining space */
+text-align: center;
+color:black; /* Center the text */
+}
+.navicon1 {
+font-size: 22px;
+color: white;
+float: right;
+margin-top: -20px;
+margin-right: -15px;
+}
+.navicon1 i {
+margin-right: 0px;
+transition: color 0.3s; 
+}
+/*style for the stars icons and the price and name of the dish*/
+.stars{
+margin-left: 30px;margin-top: 10px;
+margin-right: 0px !important;
+}.fa-star{
+background: 
+radial-gradient(ellipse at center, #F2F2F2 0%, #FFFFFF 70%, #F2F2F2 100%), 
+radial-gradient(590px at 8.2% 13.8%, #FF0000 0%, #FFFFFF 50%, #F2F2F2 90%);
+color: red;
+margin-bottom: 0px;
+font-size: 12px;
+}
+.stars{
+text-align: end;  
+margin-right: 10px;
+}
+.price{
+background: green;
+border-radius: 5px; 
+display: inline-block;
+padding: 5px;
+padding-bottom: 2px;
+padding-top: 2px;
+}
+.dish {
+    color: yellow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
